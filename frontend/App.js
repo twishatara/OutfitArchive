@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ClothingScreen from './screens/ClothingScreen';
-import OutfitScreen from './screens/OutfitScreen';
+import HomeScreen from './screens/HomeScreen';  // Example main screen
+import ClothingDetails from './screens/ClothingDetails';  // The new screen for displaying clothing details
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ClothingScreen">
-        <Stack.Screen name="ClothingScreen" component={ClothingScreen} options={{ title: 'Clothing' }} />
-        <Stack.Screen name="OutfitScreen" component={OutfitScreen} options={{ title: 'Outfits' }} />
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="ClothingDetails" component={ClothingDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
